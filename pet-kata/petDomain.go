@@ -10,15 +10,15 @@ import (
 // 	pets      []Pet
 // }
 
-type PetType string
+type PetType int
 
 const (
-	Cat     PetType = "CAT"
-	Dog             = "DOG"
-	Hamster         = "HAMSTER"
-	Turtle          = "TURTLE"
-	Bird            = "BIRD"
-	Snake           = "SNAKE"
+	Cat PetType = iota
+	Dog
+	Hamster
+	Turtle
+	Bird
+	Snake
 )
 
 func (pt PetType) IsValid() error {
@@ -29,18 +29,14 @@ func (pt PetType) IsValid() error {
 	return errors.New("invalid Pet Type")
 }
 
-// func (pt PetType) String() string {
-// 	return []string{"Cat", "Dog", "Hamster", "Turtle", "Bird", "Snake"}
-// }
+func (pt PetType) String() string {
+	return [...]string{"Cat", "Dog", "Hamster", "Turtle", "Bird", "Snake"}[pt]
+}
 
 /*********/
 
 // type Pet struct {
-// 	petType string
+// 	petType PetType
 // 	name    string
 // 	age     int64
-// }
-
-// func (p Pet) getPets {
-
 // }
