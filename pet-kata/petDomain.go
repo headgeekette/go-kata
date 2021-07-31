@@ -75,12 +75,12 @@ func getCustomerList() []Person {
 	return cl
 }
 
-func getPersonNamed(fn, ln string) Person {
-	var p Person
-	for _, v := range getCustomerList() {
-		if v.firstName == fn && v.lastName == ln {
-			return v
-		}
-	}
-	return p
-}
+// func getPersonNamed(fn, ln string) Person {
+// 	var p Person
+// 	for _, v := range getCustomerList() {
+// 		if v.firstName == fn && v.lastName == ln {
+// 			return v
+// 		}
+// 	}
+// 	return p
+// }
